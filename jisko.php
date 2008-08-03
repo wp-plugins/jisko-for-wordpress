@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Jisko for Wordpress
-Version: 1.9
+Version: 1.0
 Plugin URI: http://rick.jinlabs.com/code/jisko
 Description: Displays your public Jisko notes for all to read. Based on <a href="http://cavemonkey50.com/code/pownce/">Pownce for Wordpress</a> by <a href="http://cavemonkey50.com/">Cavemonkey50</a>.
 Author: Ricardo Gonz&aacute;lez
