@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Jisko for Wordpress
-Version: 1.0.1
+Version: 1.0.2
 Plugin URI: http://rick.jinlabs.com/code/jisko
 Description: Displays your public Jisko notes for all to read. Based on <a href="http://cavemonkey50.com/code/pownce/">Pownce for Wordpress</a> by <a href="http://cavemonkey50.com/">Cavemonkey50</a>.
 Author: Ricardo Gonz&aacute;lez
@@ -30,6 +30,7 @@ Author URI: http://rick.jinlabs.com/
 //define('MAGPIE_CACHE_AGE', 120);
 define('MAGPIE_CACHE_ON', 0); //2.7 Cache Bug
 define('MAGPIE_INPUT_ENCODING', 'UTF-8');
+define('MAGPIE_OUTPUT_ENCODING', 'UTF-8');
 
 $jisko_options['widget_fields']['title'] = array('label'=>'Title:', 'type'=>'text', 'default'=>'');
 $jisko_options['widget_fields']['username'] = array('label'=>'Username:', 'type'=>'text', 'default'=>'');
@@ -157,7 +158,7 @@ function widget_jisko_init() {
 
 
 		// These lines generate our output.
-		echo $before_widget . $before_title . $item['title'] . $after_title;
+		echo $before_widget . $before_title . '<a href="http://jisko.net/' . $item['username'] . '" class="jisko_title_link">'. $item['title'] . '</a>' . $after_title;
 		jisko_messages($item['username'], $item['num'], true, $item['update'], $item['linked'], $item['hyperlinks'], $item['jisko_users'], $item['encode_utf8']);
 		echo $after_widget;
 				
